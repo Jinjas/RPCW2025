@@ -1,0 +1,290 @@
+@prefix : <http://rpcw/ontologies/2025/historia/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw/ontologies/2025/historia/> .
+
+<http://rpcw/ontologies/2025/historia> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw/ontologies/2025/historia#Protege
+:Protege rdf:type owl:ObjectProperty ;
+         rdfs:domain :Animal ;
+         rdfs:range :Pessoa .
+
+
+###  http://rpcw/ontologies/2025/historia#ajuda
+:ajuda rdf:type owl:ObjectProperty ;
+       rdfs:domain :Pessoa ;
+       rdfs:range :Pessoa .
+
+
+###  http://rpcw/ontologies/2025/historia#contrata
+:contrata rdf:type owl:ObjectProperty ;
+          owl:inverseOf :éContratado ;
+          rdfs:domain :Pessoa ;
+          rdfs:range :Trabalhador .
+
+
+###  http://rpcw/ontologies/2025/historia#possui
+:possui rdf:type owl:ObjectProperty ;
+        rdfs:domain :Pessoa ;
+        rdfs:range :carro .
+
+
+###  http://rpcw/ontologies/2025/historia#viveEm
+:viveEm rdf:type owl:ObjectProperty ;
+        rdfs:domain :Pessoa .
+
+
+###  http://rpcw/ontologies/2025/historia#éContratado
+:éContratado rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw/ontologies/2025/historia/cria
+:cria rdf:type owl:ObjectProperty .
+
+
+###  http://rpcw/ontologies/2025/historia/cultiva
+:cultiva rdf:type owl:ObjectProperty ;
+         rdfs:domain :Pessoa ;
+         rdfs:range [ rdf:type owl:Class ;
+                      owl:unionOf ( :Vegetais
+                                    :Fruta
+                                  )
+                    ] .
+
+
+###  http://rpcw/ontologies/2025/historia/éFilho
+:éFilho rdf:type owl:ObjectProperty ;
+        owl:inverseOf :éProgenitor .
+
+
+###  http://rpcw/ontologies/2025/historia/éProgenitor
+:éProgenitor rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://rpcw/ontologies/2025/historia#Refeiçao
+:Refeiçao rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Trabalhador .
+
+
+###  http://rpcw/ontologies/2025/historia#Salario
+:Salario rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Trabalhador .
+
+
+###  http://rpcw/ontologies/2025/historia/temNome
+:temNome rdf:type owl:DatatypeProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Animal
+                                     :Fruta
+                                     :Pessoa
+                                   )
+                     ] ;
+         rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://rpcw/ontologies/2025/historia#Trabalhador
+:Trabalhador rdf:type owl:Class ;
+             rdfs:subClassOf :Pessoa .
+
+
+###  http://rpcw/ontologies/2025/historia#Vegetais
+:Vegetais rdf:type owl:Class .
+
+
+###  http://rpcw/ontologies/2025/historia#carro
+:carro rdf:type owl:Class .
+
+
+###  http://rpcw/ontologies/2025/historia/Agricultor
+:Agricultor rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty :cultiva ;
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :Vegetais
+                                                                     :Fruta
+                                                                   )
+                                                     ]
+                                ] ;
+            rdfs:subClassOf :Pessoa .
+
+
+###  http://rpcw/ontologies/2025/historia/Animal
+:Animal rdf:type owl:Class .
+
+
+###  http://rpcw/ontologies/2025/historia/Fruta
+:Fruta rdf:type owl:Class .
+
+
+###  http://rpcw/ontologies/2025/historia/Localidade
+:Localidade rdf:type owl:Class .
+
+
+###  http://rpcw/ontologies/2025/historia/Pessoa
+:Pessoa rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://rpcw/ontologies/2025/historia#Alface
+:Alface rdf:type owl:NamedIndividual ,
+                 :Vegetais .
+
+
+###  http://rpcw/ontologies/2025/historia#Cenoura
+:Cenoura rdf:type owl:NamedIndividual ,
+                  :Vegetais .
+
+
+###  http://rpcw/ontologies/2025/historia#Porcos
+:Porcos rdf:type owl:NamedIndividual ,
+                 :Animal ;
+        :temNome "Porcos" .
+
+
+###  http://rpcw/ontologies/2025/historia#Rex
+:Rex rdf:type owl:NamedIndividual ,
+              :Animal ;
+     :Protege :Ana ,
+              :João ,
+              :Maria ,
+              :Pedro .
+
+
+###  http://rpcw/ontologies/2025/historia#Sr_Carlos
+:Sr_Carlos rdf:type owl:NamedIndividual ,
+                    :Pessoa ;
+           :viveEm :São_Jose ;
+           :cultiva :Alface ,
+                    :Cenoura ,
+                    :Tomates ;
+           :temNome "Carlos" .
+
+
+###  http://rpcw/ontologies/2025/historia#São_Jose
+:São_Jose rdf:type owl:NamedIndividual ,
+                   :Localidade ;
+          :temNome "Sao José" .
+
+
+###  http://rpcw/ontologies/2025/historia#Tomates
+:Tomates rdf:type owl:NamedIndividual ,
+                  :Vegetais .
+
+
+###  http://rpcw/ontologies/2025/historia#Trabalhador1
+:Trabalhador1 rdf:type owl:NamedIndividual ,
+                       :Pessoa ;
+              :Refeiçao "comeu" ;
+              :Salario 10 ;
+              :temNome "Roberto" .
+
+
+###  http://rpcw/ontologies/2025/historia#Trabalhador2
+:Trabalhador2 rdf:type owl:NamedIndividual ,
+                       :Pessoa ;
+              :Refeiçao "comeu" ;
+              :Salario 9 ;
+              :temNome "Roberto" .
+
+
+###  http://rpcw/ontologies/2025/historia#galinhas
+:galinhas rdf:type owl:NamedIndividual ,
+                   :Animal ;
+          :temNome "Galinhas" .
+
+
+###  http://rpcw/ontologies/2025/historia#trator
+:trator rdf:type owl:NamedIndividual ,
+                 :carro .
+
+
+###  http://rpcw/ontologies/2025/historia#vacas
+:vacas rdf:type owl:NamedIndividual ,
+                :Animal ;
+       :temNome "Vacas" .
+
+
+###  http://rpcw/ontologies/2025/historia/Ana
+:Ana rdf:type owl:NamedIndividual ,
+              :Pessoa ;
+     :ajuda :Maria ;
+     :possui :trator ;
+     :éFilho :João ,
+             :Maria ;
+     :temNome "Ana" .
+
+
+###  http://rpcw/ontologies/2025/historia/Banana
+:Banana rdf:type owl:NamedIndividual ,
+                 :Fruta ;
+        :temNome "Banana" .
+
+
+###  http://rpcw/ontologies/2025/historia/João
+:João rdf:type owl:NamedIndividual ,
+               :Pessoa ;
+      :contrata :Trabalhador1 ,
+                :Trabalhador2 ;
+      :possui :trator ;
+      :viveEm :São_Jose ;
+      :cria :Porcos ,
+            :galinhas ,
+            :vacas ;
+      :cultiva :Banana ,
+               :Laranja ,
+               :Maça ;
+      :temNome "João" .
+
+
+###  http://rpcw/ontologies/2025/historia/Laranja
+:Laranja rdf:type owl:NamedIndividual ,
+                  :Fruta ;
+         :temNome "Laranja" .
+
+
+###  http://rpcw/ontologies/2025/historia/Maria
+:Maria rdf:type owl:NamedIndividual ,
+                :Pessoa ;
+       :possui :trator ;
+       :viveEm :São_Jose ;
+       :temNome "Maria" .
+
+
+###  http://rpcw/ontologies/2025/historia/Maça
+:Maça rdf:type owl:NamedIndividual ,
+               :Fruta ;
+      :temNome "Maça" .
+
+
+###  http://rpcw/ontologies/2025/historia/Pedro
+:Pedro rdf:type owl:NamedIndividual ,
+                :Pessoa ;
+       :ajuda :João ;
+       :possui :trator ;
+       :viveEm :São_Jose ;
+       :éFilho :João ,
+               :Maria ;
+       :temNome "Pedro" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
