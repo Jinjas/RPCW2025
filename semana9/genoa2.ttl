@@ -1,0 +1,107 @@
+@prefix : <http://npcw/ontologies/2025/genoa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://npcw/ontologies/2025/genoa> a owl:Ontology .
+
+:José a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "José"@pt ;
+    :temMae :Maria ;
+    :temPai :João .
+
+:nome a owl:DatatypeProperty ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:temMae a owl:ObjectProperty .
+
+:temPai a owl:ObjectProperty .
+
+:temFilho a owl:ObjectProperty .
+
+:Ana a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Ana"@pt ;
+    :temMae :Cristina ;
+    :temPai :Hugo .
+
+:Catarina a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Catarina"@pt .
+
+:Cristina a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Cristina"@pt .
+
+:Custodia a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Custodia"@pt .
+
+:Francisco a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Francisco"@pt ;
+    :temMae :Custodia ;
+    :temPai :Rui .
+
+:Hugo a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Hugo"@pt .
+
+:João a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "João"@pt ;
+    :temMae :Ana ;
+    :temPai :Manuel .
+
+:Mafalda a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Mafalda"@pt .
+
+:Manuel a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Manuel"@pt ;
+    :temMae :Mafalda ;
+    :temPai :Zacarias .
+
+:Maria a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Maria"@pt ;
+    :temMae :Rosa ;
+    :temPai :Francisco .
+
+:Nuni a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Nuni"@pt .
+
+:Rosa a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Rosa"@pt ;
+    :temMae :Catarina ;
+    :temPai :Nuni .
+
+:Rui a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Rui"@pt .
+
+:Zacarias a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Zacarias"@pt .
+
+:Pessoa a owl:Class .
+
+
+:Zacarias a :Pessoa ;
+    :nome "Zacarias"@pt .
+
+:Pessoa a owl:Class .
+
+
+
+:Zacarias a :Pessoa ;
+    :nome "Zacarias"@pt .
+
+:Pessoa a owl:Class .
+
+

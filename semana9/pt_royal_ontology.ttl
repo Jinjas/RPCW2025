@@ -1,0 +1,468 @@
+@prefix : <http://www.semanticweb.org/realeza#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/realeza#> .
+
+<http://www.semanticweb.org/realeza> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  xsd:date
+<xsd:date> rdf:type rdfs:Datatype .
+
+
+###  xsd:string
+<xsd:string> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/realeza#dataMorte
+:dataMorte rdf:type owl:ObjectProperty ;
+           rdfs:domain :Pessoa ;
+           rdfs:range <xsd:date> .
+
+
+###  http://www.semanticweb.org/realeza#dataNasc
+:dataNasc rdf:type owl:ObjectProperty ;
+          rdfs:domain :Pessoa ;
+          rdfs:range <xsd:date> .
+
+
+###  http://www.semanticweb.org/realeza#nome
+:nome rdf:type owl:ObjectProperty ;
+      rdfs:domain :Pessoa ;
+      rdfs:range <xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#pertenceDinastia
+:pertenceDinastia rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Pessoa ;
+                  rdfs:range :Dinastia .
+
+
+###  http://www.semanticweb.org/realeza#temMae
+:temMae rdf:type owl:ObjectProperty ;
+        rdfs:domain :Pessoa ;
+        rdfs:range :Pessoa .
+
+
+###  http://www.semanticweb.org/realeza#temPai
+:temPai rdf:type owl:ObjectProperty ;
+        rdfs:domain :Pessoa ;
+        rdfs:range :Pessoa .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/realeza#dataMorte
+:dataMorte rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/realeza#dataNasc
+:dataNasc rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/realeza#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/realeza#Dinastia
+:Dinastia rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/realeza#Pessoa
+:Pessoa rdf:type owl:Class .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/realeza#Afonsina
+:Afonsina rdf:type owl:NamedIndividual ,
+                   :Dinastia ;
+          rdfs:label "Afonsina" .
+
+
+###  http://www.semanticweb.org/realeza#Avis
+:Avis rdf:type owl:NamedIndividual ,
+               :Dinastia ;
+      rdfs:label "Avis" .
+
+
+###  http://www.semanticweb.org/realeza#Bragança
+:Bragança rdf:type owl:NamedIndividual ,
+                   :Dinastia ;
+          rdfs:label "Bragança" .
+
+
+###  http://www.semanticweb.org/realeza#D_Afonso_II
+:D_Afonso_II rdf:type owl:NamedIndividual ,
+                      :Pessoa ;
+             :pertenceDinastia :Afonsina ;
+             :temPai :D_Sancho_I ;
+             :dataMorte "1223-03-25"^^<xsd:date> ;
+             :dataNasc "1185-04-23"^^<xsd:date> ;
+             :nome "D. Afonso II"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Afonso_III
+:D_Afonso_III rdf:type owl:NamedIndividual ,
+                       :Pessoa ;
+              :pertenceDinastia :Afonsina ;
+              :temPai :D_Afonso_II ;
+              :dataMorte "1279-02-16"^^<xsd:date> ;
+              :dataNasc "1210-05-05"^^<xsd:date> ;
+              :nome "D. Afonso III"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Afonso_IV
+:D_Afonso_IV rdf:type owl:NamedIndividual ,
+                      :Pessoa ;
+             :pertenceDinastia :Afonsina ;
+             :temPai :D_Dinis ;
+             :dataMorte "1357-05-28"^^<xsd:date> ;
+             :dataNasc "1291-02-08"^^<xsd:date> ;
+             :nome "D. Afonso IV"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Afonso_I_Afonso_Henriques
+:D_Afonso_I_Afonso_Henriques rdf:type owl:NamedIndividual ,
+                                      :Pessoa ;
+                             :pertenceDinastia :Afonsina ;
+                             :dataMorte "1185-12-06"^^<xsd:date> ;
+                             :dataNasc "1109-07-25"^^<xsd:date> ;
+                             :nome "D. Afonso I (Afonso Henriques)"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Afonso_V
+:D_Afonso_V rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Avis ;
+            :temPai :D_Duarte_I ;
+            :dataMorte "1481-08-28"^^<xsd:date> ;
+            :dataNasc "1432-01-15"^^<xsd:date> ;
+            :nome "D. Afonso V"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Afonso_VI
+:D_Afonso_VI rdf:type owl:NamedIndividual ,
+                      :Pessoa ;
+             :pertenceDinastia :Bragança ;
+             :temPai :D_Joao_IV ;
+             :dataMorte "1683-09-12"^^<xsd:date> ;
+             :dataNasc "1643-08-21"^^<xsd:date> ;
+             :nome "D. Afonso VI"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Carlos_I
+:D_Carlos_I rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Bragança ;
+            :temPai :D_Luis_I ;
+            :dataMorte "1908-02-01"^^<xsd:date> ;
+            :dataNasc "1863-09-28"^^<xsd:date> ;
+            :nome "D. Carlos I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Dinis
+:D_Dinis rdf:type owl:NamedIndividual ,
+                  :Pessoa ;
+         :pertenceDinastia :Afonsina ;
+         :temPai :D_Afonso_III ;
+         :dataMorte "1325-01-07"^^<xsd:date> ;
+         :dataNasc "1261-10-09"^^<xsd:date> ;
+         :nome "D. Dinis"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Duarte_I
+:D_Duarte_I rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Avis ;
+            :temPai :D_Joao_I ;
+            :dataMorte "1438-09-09"^^<xsd:date> ;
+            :dataNasc "1391-10-31"^^<xsd:date> ;
+            :nome "D. Duarte I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Fernando_I
+:D_Fernando_I rdf:type owl:NamedIndividual ,
+                       :Pessoa ;
+              :pertenceDinastia :Afonsina ;
+              :temPai :D_Pedro_I ;
+              :dataMorte "1383-10-22"^^<xsd:date> ;
+              :dataNasc "1345-10-31"^^<xsd:date> ;
+              :nome "D. Fernando I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Filipe_I
+:D_Filipe_I rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Filipina ;
+            :dataMorte "1598-09-13"^^<xsd:date> ;
+            :dataNasc "1527-05-21"^^<xsd:date> ;
+            :nome "D. Filipe I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Filipe_II
+:D_Filipe_II rdf:type owl:NamedIndividual ,
+                      :Pessoa ;
+             :pertenceDinastia :Filipina ;
+             :temPai :D_Filipe_I ;
+             :dataMorte "1621-03-31"^^<xsd:date> ;
+             :dataNasc "1578-04-14"^^<xsd:date> ;
+             :nome "D. Filipe II"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Filipe_III
+:D_Filipe_III rdf:type owl:NamedIndividual ,
+                       :Pessoa ;
+              :pertenceDinastia :Filipina ;
+              :temPai :D_Filipe_II ;
+              :dataMorte "1665-09-17"^^<xsd:date> ;
+              :dataNasc "1605-04-08"^^<xsd:date> ;
+              :nome "D. Filipe III"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Henrique_I
+:D_Henrique_I rdf:type owl:NamedIndividual ,
+                       :Pessoa ;
+              :pertenceDinastia :Avis ;
+              :temPai :D_Manuel_I ;
+              :dataMorte "1580-01-31"^^<xsd:date> ;
+              :dataNasc "1512-01-31"^^<xsd:date> ;
+              :nome "D. Henrique I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Joao_I
+:D_Joao_I rdf:type owl:NamedIndividual ,
+                   :Pessoa ;
+          :pertenceDinastia :Avis ;
+          :temPai :D_Pedro_I ;
+          :dataMorte "1433-08-14"^^<xsd:date> ;
+          :dataNasc "1357-04-11"^^<xsd:date> ;
+          :nome "D. João I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Joao_II
+:D_Joao_II rdf:type owl:NamedIndividual ,
+                    :Pessoa ;
+           :pertenceDinastia :Avis ;
+           :temPai :D_Afonso_V ;
+           :dataMorte "1495-10-25"^^<xsd:date> ;
+           :dataNasc "1455-03-03"^^<xsd:date> ;
+           :nome "D. João II"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Joao_III
+:D_Joao_III rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Avis ;
+            :temPai :D_Manuel_I ;
+            :dataMorte "1557-06-11"^^<xsd:date> ;
+            :dataNasc "1502-06-06"^^<xsd:date> ;
+            :nome "D. João III"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Joao_IV
+:D_Joao_IV rdf:type owl:NamedIndividual ,
+                    :Pessoa ;
+           :pertenceDinastia :Bragança ;
+           :dataMorte "1656-11-06"^^<xsd:date> ;
+           :dataNasc "1604-03-19"^^<xsd:date> ;
+           :nome "D. João IV"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Joao_V
+:D_Joao_V rdf:type owl:NamedIndividual ,
+                   :Pessoa ;
+          :pertenceDinastia :Bragança ;
+          :temPai :D_Pedro_II ;
+          :dataMorte "1750-07-31"^^<xsd:date> ;
+          :dataNasc "1689-10-22"^^<xsd:date> ;
+          :nome "D. João V"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Joao_VI
+:D_Joao_VI rdf:type owl:NamedIndividual ,
+                    :Pessoa ;
+           :pertenceDinastia :Bragança ;
+           :temMae :D_Maria_I ;
+           :dataMorte "1826-03-10"^^<xsd:date> ;
+           :dataNasc "1767-05-13"^^<xsd:date> ;
+           :nome "D. João VI"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Jose_I
+:D_Jose_I rdf:type owl:NamedIndividual ,
+                   :Pessoa ;
+          :pertenceDinastia :Bragança ;
+          :temPai :D_Joao_V ;
+          :dataMorte "1777-02-24"^^<xsd:date> ;
+          :dataNasc "1714-06-06"^^<xsd:date> ;
+          :nome "D. José I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Luis_I
+:D_Luis_I rdf:type owl:NamedIndividual ,
+                   :Pessoa ;
+          :pertenceDinastia :Bragança ;
+          :temPai :D_Maria_II ;
+          :dataMorte "1889-10-19"^^<xsd:date> ;
+          :dataNasc "1838-10-31"^^<xsd:date> ;
+          :nome "D. Luís I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Manuel_I
+:D_Manuel_I rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Avis ;
+            :dataMorte "1521-12-13"^^<xsd:date> ;
+            :dataNasc "1469-05-31"^^<xsd:date> ;
+            :nome "D. Manuel I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Manuel_II
+:D_Manuel_II rdf:type owl:NamedIndividual ,
+                      :Pessoa ;
+             :pertenceDinastia :Bragança ;
+             :temPai :D_Carlos_I ;
+             :dataMorte "1932-07-02"^^<xsd:date> ;
+             :dataNasc "1889-11-15"^^<xsd:date> ;
+             :nome "D. Manuel II"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Maria_I
+:D_Maria_I rdf:type owl:NamedIndividual ,
+                    :Pessoa ;
+           :pertenceDinastia :Bragança ;
+           :temPai :D_Jose_I ;
+           :dataMorte "1816-03-20"^^<xsd:date> ;
+           :dataNasc "1734-12-17"^^<xsd:date> ;
+           :nome "D. Maria I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Maria_II
+:D_Maria_II rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Bragança ;
+            :temPai :D_Pedro_IV ;
+            :dataMorte "1853-11-15"^^<xsd:date> ;
+            :dataNasc "1819-04-04"^^<xsd:date> ;
+            :nome "D. Maria II"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Miguel_I
+:D_Miguel_I rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Bragança ;
+            :temPai :D_Joao_VI ;
+            :dataMorte "1866-11-14"^^<xsd:date> ;
+            :dataNasc "1802-10-26"^^<xsd:date> ;
+            :nome "D. Miguel I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Pedro_I
+:D_Pedro_I rdf:type owl:NamedIndividual ,
+                    :Pessoa ;
+           :pertenceDinastia :Afonsina ;
+           :temPai :D_Afonso_IV ;
+           :dataMorte "1367-01-18"^^<xsd:date> ;
+           :dataNasc "1320-04-08"^^<xsd:date> ;
+           :nome "D. Pedro I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Pedro_II
+:D_Pedro_II rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Bragança ;
+            :temPai :D_Joao_IV ;
+            :dataMorte "1706-12-09"^^<xsd:date> ;
+            :dataNasc "1648-04-26"^^<xsd:date> ;
+            :nome "D. Pedro II"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Pedro_IV
+:D_Pedro_IV rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Bragança ;
+            :temPai :D_Joao_VI ;
+            :dataMorte "1834-09-24"^^<xsd:date> ;
+            :dataNasc "1798-10-12"^^<xsd:date> ;
+            :nome "D. Pedro IV"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Pedro_V
+:D_Pedro_V rdf:type owl:NamedIndividual ,
+                    :Pessoa ;
+           :pertenceDinastia :Bragança ;
+           :temPai :D_Maria_II ;
+           :dataMorte "1861-11-11"^^<xsd:date> ;
+           :dataNasc "1837-09-16"^^<xsd:date> ;
+           :nome "D. Pedro V"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Sancho_I
+:D_Sancho_I rdf:type owl:NamedIndividual ,
+                     :Pessoa ;
+            :pertenceDinastia :Afonsina ;
+            :dataMorte "1211-03-26"^^<xsd:date> ;
+            :dataNasc "1154-11-11"^^<xsd:date> ;
+            :nome "D. Sancho I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Sancho_II
+:D_Sancho_II rdf:type owl:NamedIndividual ,
+                      :Pessoa ;
+             :pertenceDinastia :Afonsina ;
+             :temPai :D_Afonso_II ;
+             :dataMorte "1248-01-04"^^<xsd:date> ;
+             :dataNasc "1209-09-08"^^<xsd:date> ;
+             :nome "D. Sancho II"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#D_Sebastiao_I
+:D_Sebastiao_I rdf:type owl:NamedIndividual ,
+                        :Pessoa ;
+               :pertenceDinastia :Avis ;
+               :dataMorte "1578-08-04"^^<xsd:date> ;
+               :dataNasc "1554-01-20"^^<xsd:date> ;
+               :nome "D. Sebastião I"^^<xsd:string> .
+
+
+###  http://www.semanticweb.org/realeza#Filipina
+:Filipina rdf:type owl:NamedIndividual ,
+                  :Dinastia ;
+         rdfs:label "Filipina" .
+
+
+###  http://www.semanticweb.org/realeza#Dinastia%20Afonsina
+:Afonsina rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/realeza#Dinastia%20Filipina
+:Filipina rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/realeza#Dinastia%20de%20Avis
+:Avis rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/realeza#Dinastia%20de%20Bragança
+:Bragança rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

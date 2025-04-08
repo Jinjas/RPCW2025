@@ -1,0 +1,107 @@
+@prefix : <http://npcw/ontologies/2025/genoa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://npcw/ontologies/2025/genoa> a owl:Ontology .
+
+:nome a owl:DatatypeProperty ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:temFilho a owl:ObjectProperty .
+
+:temMae a owl:ObjectProperty .
+
+:temPai a owl:ObjectProperty .
+
+:Catarina a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Catarina"@pt ;
+    :temFilho :Rosa .
+
+:Cristina a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Cristina"@pt ;
+    :temFilho :Ana .
+
+:Custodia a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Custodia"@pt ;
+    :temFilho :Francisco .
+
+:Hugo a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Hugo"@pt ;
+    :temFilho :Ana .
+
+:Mafalda a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Mafalda"@pt ;
+    :temFilho :Manuel .
+
+:Nuni a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Nuni"@pt ;
+    :temFilho :Rosa .
+
+:Rui a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Rui"@pt ;
+    :temFilho :Francisco .
+
+:Zacarias a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Zacarias"@pt ;
+    :temFilho :Manuel .
+
+:José a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "José"@pt ;
+    :temMae :Maria ;
+    :temPai :João .
+
+:Ana a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Ana"@pt ;
+    :temFilho :João ;
+    :temMae :Cristina ;
+    :temPai :Hugo .
+
+:Francisco a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Francisco"@pt ;
+    :temFilho :Maria ;
+    :temMae :Custodia ;
+    :temPai :Rui .
+
+:João a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "João"@pt ;
+    :temFilho :José ;
+    :temMae :Ana ;
+    :temPai :Manuel .
+
+:Manuel a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Manuel"@pt ;
+    :temFilho :João ;
+    :temMae :Mafalda ;
+    :temPai :Zacarias .
+
+:Maria a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Maria"@pt ;
+    :temFilho :José ;
+    :temMae :Rosa ;
+    :temPai :Francisco .
+
+:Rosa a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Rosa"@pt ;
+    :temFilho :Maria ;
+    :temMae :Catarina ;
+    :temPai :Nuni .
+
+:Pessoa a owl:Class .
+

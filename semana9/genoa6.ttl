@@ -1,0 +1,153 @@
+@prefix : <http://npcw/ontologies/2025/genoa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://npcw/ontologies/2025/genoa> a owl:Ontology .
+
+:nome a owl:DatatypeProperty ;
+    rdfs:domain :Pessoa ;
+    rdfs:range xsd:string .
+
+:temAvo a owl:ObjectProperty .
+
+:temFilho a owl:ObjectProperty .
+
+:temIrmao a owl:ObjectProperty .
+
+:temMae a owl:ObjectProperty .
+
+:temNeto a owl:ObjectProperty .
+
+:temPai a owl:ObjectProperty .
+
+:temSogra a owl:ObjectProperty .
+
+:temSogro a owl:ObjectProperty .
+
+:Catarina a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Catarina"@pt ;
+    :temFilho :Rosa ;
+    :temNeto :Maria .
+
+:Cristina a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Cristina"@pt ;
+    :temFilho :Ana ;
+    :temNeto :João .
+
+:Custodia a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Custodia"@pt ;
+    :temFilho :Francisco ;
+    :temNeto :Maria .
+
+:Hugo a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Hugo"@pt ;
+    :temFilho :Ana ;
+    :temNeto :João .
+
+:Mafalda a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Mafalda"@pt ;
+    :temFilho :Manuel ;
+    :temNeto :João .
+
+:Nuni a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Nuni"@pt ;
+    :temFilho :Rosa ;
+    :temNeto :Maria .
+
+:Rui a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Rui"@pt ;
+    :temFilho :Francisco ;
+    :temNeto :Maria .
+
+:Zacarias a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Zacarias"@pt ;
+    :temFilho :Manuel ;
+    :temNeto :João .
+
+:Ana a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Ana"@pt ;
+    :temFilho :João ;
+    :temMae :Cristina ;
+    :temNeto :José ;
+    :temPai :Hugo ;
+    :temSogra :Mafalda ;
+    :temSogro :Zacarias .
+
+:Francisco a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Francisco"@pt ;
+    :temFilho :Maria ;
+    :temMae :Custodia ;
+    :temNeto :José ;
+    :temPai :Rui ;
+    :temSogra :Catarina ;
+    :temSogro :Nuni .
+
+:Manuel a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Manuel"@pt ;
+    :temFilho :João ;
+    :temMae :Mafalda ;
+    :temNeto :José ;
+    :temPai :Zacarias ;
+    :temSogra :Cristina ;
+    :temSogro :Hugo .
+
+:Rosa a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Rosa"@pt ;
+    :temFilho :Maria ;
+    :temMae :Catarina ;
+    :temNeto :José ;
+    :temPai :Nuni ;
+    :temSogra :Custodia ;
+    :temSogro :Rui .
+
+:José a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "José"@pt ;
+    :temAvo :Ana,
+        :Francisco,
+        :Manuel,
+        :Rosa ;
+    :temMae :Maria ;
+    :temPai :João .
+
+:João a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "João"@pt ;
+    :temAvo :Cristina,
+        :Hugo,
+        :Mafalda,
+        :Zacarias ;
+    :temFilho :José ;
+    :temMae :Ana ;
+    :temPai :Manuel ;
+    :temSogra :Rosa ;
+    :temSogro :Francisco .
+
+:Maria a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Maria"@pt ;
+    :temAvo :Catarina,
+        :Custodia,
+        :Nuni,
+        :Rui ;
+    :temFilho :José ;
+    :temMae :Rosa ;
+    :temPai :Francisco ;
+    :temSogra :Ana ;
+    :temSogro :Manuel .
+
+:Pessoa a owl:Class .
+
