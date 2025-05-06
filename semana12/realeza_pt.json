@@ -1,0 +1,252 @@
+{
+    "Dinastia Afonsina": [
+      {
+        "nome": "D. Afonso I (Afonso Henriques)",
+        "nascimento": "1109-07-25",
+        "morte": "1185-12-06",
+        "pai": "Henrique de Borgonha",
+        "mãe": "Teresa de Leão"
+      },
+      {
+        "nome": "D. Sancho I",
+        "nascimento": "1154-11-11",
+        "morte": "1211-03-26",
+        "pai": "D. Afonso I",
+        "mãe": "D. Mafalda de Saboia"
+      },
+      {
+        "nome": "D. Afonso II",
+        "nascimento": "1185-04-23",
+        "morte": "1223-03-25",
+        "pai": "D. Sancho I",
+        "mãe": "D. Dulce de Aragão"
+      },
+      {
+        "nome": "D. Sancho II",
+        "nascimento": "1209-09-08",
+        "morte": "1248-01-04",
+        "pai": "D. Afonso II",
+        "mãe": "D. Urraca de Castela"
+      },
+      {
+        "nome": "D. Afonso III",
+        "nascimento": "1210-05-05",
+        "morte": "1279-02-16",
+        "pai": "D. Afonso II",
+        "mãe": "D. Urraca de Castela"
+      },
+      {
+        "nome": "D. Dinis",
+        "nascimento": "1261-10-09",
+        "morte": "1325-01-07",
+        "pai": "D. Afonso III",
+        "mãe": "Beatriz de Castela"
+      },
+      {
+        "nome": "D. Afonso IV",
+        "nascimento": "1291-02-08",
+        "morte": "1357-05-28",
+        "pai": "D. Dinis",
+        "mãe": "D. Isabel de Aragão"
+      },
+      {
+        "nome": "D. Pedro I",
+        "nascimento": "1320-04-08",
+        "morte": "1367-01-18",
+        "pai": "D. Afonso IV",
+        "mãe": "D. Beatriz de Castela"
+      },
+      {
+        "nome": "D. Fernando I",
+        "nascimento": "1345-10-31",
+        "morte": "1383-10-22",
+        "pai": "D. Pedro I",
+        "mãe": "D. Constança Manuel"
+      }
+    ],
+    "Dinastia de Avis": [
+      {
+        "nome": "D. João I",
+        "nascimento": "1357-04-11",
+        "morte": "1433-08-14",
+        "pai": "D. Pedro I",
+        "mãe": "Teresa Lourenço"
+      },
+      {
+        "nome": "D. Duarte I",
+        "nascimento": "1391-10-31",
+        "morte": "1438-09-09",
+        "pai": "D. João I",
+        "mãe": "D. Filipa de Lencastre"
+      },
+      {
+        "nome": "D. Afonso V",
+        "nascimento": "1432-01-15",
+        "morte": "1481-08-28",
+        "pai": "D. Duarte I",
+        "mãe": "D. Leonor de Aragão"
+      },
+      {
+        "nome": "D. João II",
+        "nascimento": "1455-03-03",
+        "morte": "1495-10-25",
+        "pai": "D. Afonso V",
+        "mãe": "D. Isabel de Coimbra"
+      },
+      {
+        "nome": "D. Manuel I",
+        "nascimento": "1469-05-31",
+        "morte": "1521-12-13",
+        "pai": "D. Fernando, Duque de Viseu",
+        "mãe": "D. Beatriz de Portugal"
+      },
+      {
+        "nome": "D. João III",
+        "nascimento": "1502-06-06",
+        "morte": "1557-06-11",
+        "pai": "D. Manuel I",
+        "mãe": "D. Maria de Aragão"
+      },
+      {
+        "nome": "D. Sebastião I",
+        "nascimento": "1554-01-20",
+        "morte": "1578-08-04",
+        "pai": "D. João Manuel, Príncipe de Portugal",
+        "mãe": "D. Joana de Áustria"
+      },
+      {
+        "nome": "D. Henrique I",
+        "nascimento": "1512-01-31",
+        "morte": "1580-01-31",
+        "pai": "D. Manuel I",
+        "mãe": "D. Maria de Aragão"
+      }
+    ],
+    "Dinastia Filipina": [
+      {
+        "nome": "D. Filipe I",
+        "nascimento": "1527-05-21",
+        "morte": "1598-09-13",
+        "pai": "Carlos I de Espanha",
+        "mãe": "Isabel de Portugal"
+      },
+      {
+        "nome": "D. Filipe II",
+        "nascimento": "1578-04-14",
+        "morte": "1621-03-31",
+        "pai": "D. Filipe I",
+        "mãe": "Ana de Áustria"
+      },
+      {
+        "nome": "D. Filipe III",
+        "nascimento": "1605-04-08",
+        "morte": "1665-09-17",
+        "pai": "D. Filipe II",
+        "mãe": "Margarida de Áustria"
+      }
+    ],
+    "Dinastia de Bragança": [
+          {
+            "nome": "D. João IV",
+            "nascimento": "1604-03-19",
+            "morte": "1656-11-06",
+            "pai": "Teodósio II, Duque de Bragança",
+            "mãe": "D. Ana de Velasco e Girón"
+          },
+          {
+            "nome": "D. Afonso VI",
+            "nascimento": "1643-08-21",
+            "morte": "1683-09-12",
+            "pai": "D. João IV",
+            "mãe": "D. Luísa de Gusmão"
+          },
+          {
+            "nome": "D. Pedro II",
+            "nascimento": "1648-04-26",
+            "morte": "1706-12-09",
+            "pai": "D. João IV",
+            "mãe": "D. Luísa de Gusmão"
+          },
+          {
+            "nome": "D. João V",
+            "nascimento": "1689-10-22",
+            "morte": "1750-07-31",
+            "pai": "D. Pedro II",
+            "mãe": "D. Maria Sofia de Neuburgo"
+          },
+          {
+            "nome": "D. José I",
+            "nascimento": "1714-06-06",
+            "morte": "1777-02-24",
+            "pai": "D. João V",
+            "mãe": "D. Maria Ana da Áustria"
+          },
+          {
+            "nome": "D. Maria I",
+            "nascimento": "1734-12-17",
+            "morte": "1816-03-20",
+            "pai": "D. José I",
+            "mãe": "D. Mariana Vitória de Bourbon"
+          },
+          {
+            "nome": "D. João VI",
+            "nascimento": "1767-05-13",
+            "morte": "1826-03-10",
+            "pai": "D. Pedro III",
+            "mãe": "D. Maria I"
+          },
+          {
+            "nome": "D. Pedro IV",
+            "nascimento": "1798-10-12",
+            "morte": "1834-09-24",
+            "pai": "D. João VI",
+            "mãe": "D. Carlota Joaquina de Bourbon"
+          },
+          {
+            "nome": "D. Miguel I",
+            "nascimento": "1802-10-26",
+            "morte": "1866-11-14",
+            "pai": "D. João VI",
+            "mãe": "D. Carlota Joaquina de Bourbon"
+          },
+          {
+            "nome": "D. Maria II",
+            "nascimento": "1819-04-04",
+            "morte": "1853-11-15",
+            "pai": "D. Pedro IV",
+            "mãe": "D. Maria Leopoldina da Áustria"
+          },
+          {
+            "nome": "D. Pedro V",
+            "nascimento": "1837-09-16",
+            "morte": "1861-11-11",
+            "pai": "D. Maria II",
+            "mãe": "D. Fernando II de Saxe-Coburgo-Gota"
+          },
+          {
+            "nome": "D. Luís I",
+            "nascimento": "1838-10-31",
+            "morte": "1889-10-19",
+            "pai": "D. Maria II",
+            "mãe": "D. Fernando II de Saxe-Coburgo-Gota"
+          },
+          {
+            "nome": "D. Carlos I",
+            "nascimento": "1863-09-28",
+            "morte": "1908-02-01",
+            "pai": "D. Luís I",
+            "mãe": "D. Maria Pia de Saboia"
+          },
+          {
+            "nome": "D. Manuel II",
+            "nascimento": "1889-11-15",
+            "morte": "1932-07-02",
+            "pai": "D. Carlos I",
+            "mãe": "D. Amélia de Orleães"
+          }
+        ]
+      }
+      
+  
+   
+  

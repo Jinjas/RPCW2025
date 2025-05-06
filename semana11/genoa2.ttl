@@ -1,0 +1,411 @@
+@prefix : <http://rpcw.di.uminho.pt/2025/geneologia#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://rpcw.di.uminho.pt/2025/geneologia#> .
+
+<http://rpcw.di.uminho.pt/2025/geneologia> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#eAntepassadoDe
+:eAntepassadoDe rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :temRelacao .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#eAvoFDe
+:eAvoFDe rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :eProgenitorGrau2 ;
+         owl:inverseOf :temAvoF .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#eAvoMDe
+:eAvoMDe rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :eProgenitorGrau2 ;
+         owl:inverseOf :temAvoM .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#eMaeDe
+:eMaeDe rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :eProgenitorDe ;
+        owl:inverseOf :temMae .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#ePaiDe
+:ePaiDe rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :eProgenitorDe ;
+        owl:inverseOf :temPai .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#eProgenitorDe
+:eProgenitorDe rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :eAntepassadoDe .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#eProgenitorGrau2
+:eProgenitorGrau2 rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :eAntepassadoDe .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#temAntepassado
+:temAntepassado rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :temRelacao .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#temAvoF
+:temAvoF rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :temProgenitorGrau2 ;
+         owl:propertyChainAxiom ( :temProgenitor
+                                  :temMae
+                                ) .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#temAvoM
+:temAvoM rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :temProgenitorGrau2 ;
+         owl:propertyChainAxiom ( :temProgenitor
+                                  :temPai
+                                ) .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#temMae
+:temMae rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :temProgenitor .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#temPai
+:temPai rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :temProgenitor .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#temProgenitor
+:temProgenitor rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :temAntepassado .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#temProgenitorGrau2
+:temProgenitorGrau2 rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :temAntepassado .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#temRelacao
+:temRelacao rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Abílio_da_Silva_Ramalho
+:Abílio_da_Silva_Ramalho rdf:type owl:NamedIndividual ;
+                         :temMae :Custódia_Azevedo_1867 ;
+                         :temPai :Manuel_da_Silva_Ramalho_1866 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Albina_Esteves_de_Araújo_1910
+:Albina_Esteves_de_Araújo_1910 rdf:type owl:NamedIndividual ;
+                               :temMae :Maria_Araújo_1884 ;
+                               :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Ana_Margarida_Ribeiro_Leite_1980
+:Ana_Margarida_Ribeiro_Leite_1980 rdf:type owl:NamedIndividual ;
+                                  :temMae :Maria_Margarida_Ribeiro_1954 ;
+                                  :temPai :Rui_Alberto_Araújo_Leite_1948 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Ana_da_Silva_Ramalho
+:Ana_da_Silva_Ramalho rdf:type owl:NamedIndividual ;
+                      :temMae :Custódia_Azevedo_1867 ;
+                      :temPai :Manuel_da_Silva_Ramalho_1866 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#António_da_Silva_Ramalho
+:António_da_Silva_Ramalho rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#António_da_Silva_Ramalho_1904
+:António_da_Silva_Ramalho_1904 rdf:type owl:NamedIndividual ;
+                               :temMae :Custódia_Azevedo_1867 ;
+                               :temPai :Manuel_da_Silva_Ramalho_1866 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Arminda_da_Silva_Ramalho
+:Arminda_da_Silva_Ramalho rdf:type owl:NamedIndividual ;
+                          :temMae :Custódia_Azevedo_1867 ;
+                          :temPai :Manuel_da_Silva_Ramalho_1866 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Christina_Rosa_Silva_Santos_1879
+:Christina_Rosa_Silva_Santos_1879 rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Custódia_Azevedo_1867
+:Custódia_Azevedo_1867 rdf:type owl:NamedIndividual ;
+                       :temMae :Maria_Gonçalves_de_Azevedo ;
+                       :temPai :José_Francisco_Ramos_Mouco .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Domingos_Couto_Leite
+:Domingos_Couto_Leite rdf:type owl:NamedIndividual ;
+                      :temMae :Flora_Castilho_do_Couto_Leite ;
+                      :temPai :Marçal_da_Costa_Leite .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Emília_Esteves
+:Emília_Esteves rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Emília_Esteves_de_Araújo_1908
+:Emília_Esteves_de_Araújo_1908 rdf:type owl:NamedIndividual ;
+                               :temMae :Maria_Araújo_1884 ;
+                               :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Ezequiel_da_Silva_Ramalho
+:Ezequiel_da_Silva_Ramalho rdf:type owl:NamedIndividual ;
+                           :temMae :Custódia_Azevedo_1867 ;
+                           :temPai :Manuel_da_Silva_Ramalho_1866 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Filomena_Esteves_de_Araújo_1927
+:Filomena_Esteves_de_Araújo_1927 rdf:type owl:NamedIndividual ;
+                                 :temMae :Maria_Araújo_1884 ;
+                                 :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Flora_Castilho_do_Couto_Leite
+:Flora_Castilho_do_Couto_Leite rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Florinda_Alves_dos_Santos
+:Florinda_Alves_dos_Santos rdf:type owl:NamedIndividual ;
+                           :temMae :Christina_Rosa_Silva_Santos_1879 ;
+                           :temPai :Jozé_da_Silva_Santos_1879 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Generosa_da_Silva_Ramalho
+:Generosa_da_Silva_Ramalho rdf:type owl:NamedIndividual ;
+                           :temMae :Custódia_Azevedo_1867 ;
+                           :temPai :Manuel_da_Silva_Ramalho_1866 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Gilberto_Couto_Leite
+:Gilberto_Couto_Leite rdf:type owl:NamedIndividual ;
+                      :temMae :Flora_Castilho_do_Couto_Leite ;
+                      :temPai :Marçal_da_Costa_Leite .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Helena_Couto_Leite
+:Helena_Couto_Leite rdf:type owl:NamedIndividual ;
+                    :temMae :Flora_Castilho_do_Couto_Leite ;
+                    :temPai :Marçal_da_Costa_Leite .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Henrique_Luiz_de_Araújo_1867
+:Henrique_Luiz_de_Araújo_1867 rdf:type owl:NamedIndividual ;
+                              :temMae :Maria_das_Dores_Fernandes_de_Brito ;
+                              :temPai :José_Emílio_de_Araújo .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Henrique_Luís_Esteves_de_Araújo_1924
+:Henrique_Luís_Esteves_de_Araújo_1924 rdf:type owl:NamedIndividual ;
+                                      :temMae :Maria_Araújo_1884 ;
+                                      :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Henrique_Marçal_Araújo_Leite_1943
+:Henrique_Marçal_Araújo_Leite_1943 rdf:type owl:NamedIndividual ;
+                                   :temMae :Maria_Esteves_de_Araújo_1912 ;
+                                   :temPai :Marçal_Aristides_Costa_Leite_1909 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Henrique_Miguel_Cabrita_de_Araújo_Leite_1971
+:Henrique_Miguel_Cabrita_de_Araújo_Leite_1971 rdf:type owl:NamedIndividual ;
+                                              :temMae :Maria_Otília_Araújo_Leite_1944 ;
+                                              :temPai :Henrique_Marçal_Araújo_Leite_1943 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Ilda_dos_Santos_Ramalho_1949
+:Ilda_dos_Santos_Ramalho_1949 rdf:type owl:NamedIndividual ;
+                              :temMae :Maria_Alves_dos_Santos_1906 ;
+                              :temPai :António_da_Silva_Ramalho_1904 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Isabel_Maria_Cabrita_de_Araújo_Leite_1971
+:Isabel_Maria_Cabrita_de_Araújo_Leite_1971 rdf:type owl:NamedIndividual ;
+                                           :temMae :Maria_Otília_Araújo_Leite_1944 ;
+                                           :temPai :Henrique_Marçal_Araújo_Leite_1943 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#José_Carlos_Leite_Ramalho_1967
+:José_Carlos_Leite_Ramalho_1967 rdf:type owl:NamedIndividual ;
+                                :temMae :Maria_Flora_Araújo_Leite_1941 ;
+                                :temPai :José_dos_Santos_Ramalho_1942 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#José_Emílio_Esteves_de_Araújo_1916
+:José_Emílio_Esteves_de_Araújo_1916 rdf:type owl:NamedIndividual ;
+                                    :temMae :Maria_Araújo_1884 ;
+                                    :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#José_Emílio_de_Araújo
+:José_Emílio_de_Araújo rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#José_Francisco_Ramos_Mouco
+:José_Francisco_Ramos_Mouco rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#José_Maria_Esteves
+:José_Maria_Esteves rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#José_dos_Santos_Ramalho_1942
+:José_dos_Santos_Ramalho_1942 rdf:type owl:NamedIndividual ;
+                              :temMae :Maria_Alves_dos_Santos_1906 ;
+                              :temPai :António_da_Silva_Ramalho_1904 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Jozé_da_Silva_Santos_1879
+:Jozé_da_Silva_Santos_1879 rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#João_Bernardo_Couto_Leite_1916
+:João_Bernardo_Couto_Leite_1916 rdf:type owl:NamedIndividual ;
+                                :temMae :Flora_Castilho_do_Couto_Leite ;
+                                :temPai :Marçal_da_Costa_Leite .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Luís_Esteves_de_Araújo_1918
+:Luís_Esteves_de_Araújo_1918 rdf:type owl:NamedIndividual ;
+                             :temMae :Maria_Araújo_1884 ;
+                             :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Manuel_Carlos_dos_Santos_Ramalho
+:Manuel_Carlos_dos_Santos_Ramalho rdf:type owl:NamedIndividual ;
+                                  :temMae :Maria_Alves_dos_Santos_1906 ;
+                                  :temPai :António_da_Silva_Ramalho_1904 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Manuel_Fernando_dos_Santos_Ramalho
+:Manuel_Fernando_dos_Santos_Ramalho rdf:type owl:NamedIndividual ;
+                                    :temMae :Maria_Alves_dos_Santos_1906 ;
+                                    :temPai :António_da_Silva_Ramalho_1904 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Manuel_da_Silva_Ramalho_1866
+:Manuel_da_Silva_Ramalho_1866 rdf:type owl:NamedIndividual ;
+                              :temMae :Maria_Dias_dos_Reis ;
+                              :temPai :António_da_Silva_Ramalho .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Alves_dos_Santos_1906
+:Maria_Alves_dos_Santos_1906 rdf:type owl:NamedIndividual ;
+                             :temMae :Christina_Rosa_Silva_Santos_1879 ;
+                             :temPai :Jozé_da_Silva_Santos_1879 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Araújo_1884
+:Maria_Araújo_1884 rdf:type owl:NamedIndividual ;
+                   :temMae :Emília_Esteves ;
+                   :temPai :José_Maria_Esteves .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Dias_dos_Reis
+:Maria_Dias_dos_Reis rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Esteves_de_Araújo_1912
+:Maria_Esteves_de_Araújo_1912 rdf:type owl:NamedIndividual ;
+                              :temMae :Maria_Araújo_1884 ;
+                              :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Flora_Araújo_Leite_1941
+:Maria_Flora_Araújo_Leite_1941 rdf:type owl:NamedIndividual ;
+                               :temMae :Maria_Esteves_de_Araújo_1912 ;
+                               :temPai :Marçal_Aristides_Costa_Leite_1909 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Flora_dos_Santos_Ramalho_
+:Maria_Flora_dos_Santos_Ramalho_ rdf:type owl:NamedIndividual ;
+                                 :temMae :Maria_Alves_dos_Santos_1906 ;
+                                 :temPai :António_da_Silva_Ramalho_1904 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Gonçalves_de_Azevedo
+:Maria_Gonçalves_de_Azevedo rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Helena_Leite_Ramalho_1968
+:Maria_Helena_Leite_Ramalho_1968 rdf:type owl:NamedIndividual ;
+                                 :temMae :Maria_Flora_Araújo_Leite_1941 ;
+                                 :temPai :José_dos_Santos_Ramalho_1942 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Margarida_Ribeiro_1954
+:Maria_Margarida_Ribeiro_1954 rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_Otília_Araújo_Leite_1944
+:Maria_Otília_Araújo_Leite_1944 rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Maria_das_Dores_Fernandes_de_Brito
+:Maria_das_Dores_Fernandes_de_Brito rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Marçal_Aristides_Costa_Leite_1909
+:Marçal_Aristides_Costa_Leite_1909 rdf:type owl:NamedIndividual ;
+                                   :temMae :Flora_Castilho_do_Couto_Leite ;
+                                   :temPai :Marçal_da_Costa_Leite .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Marçal_da_Costa_Leite
+:Marçal_da_Costa_Leite rdf:type owl:NamedIndividual .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Orlando_Couto_Leite
+:Orlando_Couto_Leite rdf:type owl:NamedIndividual ;
+                     :temMae :Flora_Castilho_do_Couto_Leite ;
+                     :temPai :Marçal_da_Costa_Leite .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Rosa_Couto_Leite
+:Rosa_Couto_Leite rdf:type owl:NamedIndividual ;
+                  :temMae :Flora_Castilho_do_Couto_Leite ;
+                  :temPai :Marçal_da_Costa_Leite .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Rui_Alberto_Araújo_Leite_1948
+:Rui_Alberto_Araújo_Leite_1948 rdf:type owl:NamedIndividual ;
+                               :temMae :Maria_Esteves_de_Araújo_1912 ;
+                               :temPai :Marçal_Aristides_Costa_Leite_1909 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Sara_Esteves_de_Araújo_1914
+:Sara_Esteves_de_Araújo_1914 rdf:type owl:NamedIndividual ;
+                             :temMae :Maria_Araújo_1884 ;
+                             :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Teresa_Maria_Ribeiro_Leite_1985
+:Teresa_Maria_Ribeiro_Leite_1985 rdf:type owl:NamedIndividual ;
+                                 :temMae :Maria_Margarida_Ribeiro_1954 ;
+                                 :temPai :Rui_Alberto_Araújo_Leite_1948 .
+
+
+###  http://rpcw.di.uminho.pt/2025/geneologia#Virgínia_Esteves_de_Araújo_1921
+:Virgínia_Esteves_de_Araújo_1921 rdf:type owl:NamedIndividual ;
+                                 :temMae :Maria_Araújo_1884 ;
+                                 :temPai :Henrique_Luiz_de_Araújo_1867 .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,504 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix : <http://rpcw.di.uminho.pt/2025/geneologia#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+
+<http://rpcw.di.uminho.pt/2025/geneologia> a owl:Ontology .
+
+:Abílio_da_Silva_Ramalho a owl:NamedIndividual;
+  :temMae :Custódia_Azevedo_1867;
+  :temPai :Manuel_da_Silva_Ramalho_1866;
+  :temAvoF :Maria_Dias_dos_Reis, :Maria_Gonçalves_de_Azevedo;
+  :temAvoM :António_da_Silva_Ramalho, :José_Francisco_Ramos_Mouco;
+  :temIrmao :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho, :Ezequiel_da_Silva_Ramalho,
+    :Generosa_da_Silva_Ramalho, :António_da_Silva_Ramalho_1904;
+  :temSobrinho :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_ .
+
+:temMae a owl:ObjectProperty;
+  rdfs:subPropertyOf :temProgenitor .
+
+:Custódia_Azevedo_1867 a owl:NamedIndividual;
+  :temMae :Maria_Gonçalves_de_Azevedo;
+  :temPai :José_Francisco_Ramos_Mouco .
+
+:temPai a owl:ObjectProperty;
+  rdfs:subPropertyOf :temProgenitor .
+
+:Manuel_da_Silva_Ramalho_1866 a owl:NamedIndividual;
+  :temMae :Maria_Dias_dos_Reis;
+  :temPai :António_da_Silva_Ramalho .
+
+:Albina_Esteves_de_Araújo_1910 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927, :Henrique_Luís_Esteves_de_Araújo_1924,
+    :José_Emílio_Esteves_de_Araújo_1916, :Luís_Esteves_de_Araújo_1918, :Sara_Esteves_de_Araújo_1914,
+    :Virgínia_Esteves_de_Araújo_1921, :Maria_Esteves_de_Araújo_1912;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Maria_Araújo_1884 a owl:NamedIndividual;
+  :temMae :Emília_Esteves;
+  :temPai :José_Maria_Esteves .
+
+:Henrique_Luiz_de_Araújo_1867 a owl:NamedIndividual;
+  :temMae :Maria_das_Dores_Fernandes_de_Brito;
+  :temPai :José_Emílio_de_Araújo .
+
+:Ana_Margarida_Ribeiro_Leite_1980 a owl:NamedIndividual;
+  :temMae :Maria_Margarida_Ribeiro_1954;
+  :temPai :Rui_Alberto_Araújo_Leite_1948;
+  :temAvoF :Maria_Esteves_de_Araújo_1912;
+  :temAvoM :Marçal_Aristides_Costa_Leite_1909;
+  :temIrmao :Teresa_Maria_Ribeiro_Leite_1985;
+  :temTio :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941;
+  :temPrimo :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971, :Isabel_Maria_Cabrita_de_Araújo_Leite_1971,
+    :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Maria_Margarida_Ribeiro_1954 a owl:NamedIndividual .
+
+:Rui_Alberto_Araújo_Leite_1948 a owl:NamedIndividual;
+  :temMae :Maria_Esteves_de_Araújo_1912;
+  :temPai :Marçal_Aristides_Costa_Leite_1909;
+  :temAvoF :Maria_Araújo_1884, :Flora_Castilho_do_Couto_Leite;
+  :temAvoM :Henrique_Luiz_de_Araújo_1867, :Marçal_da_Costa_Leite;
+  :temIrmao :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941;
+  :temTio :Albina_Esteves_de_Araújo_1910, :Domingos_Couto_Leite, :Emília_Esteves_de_Araújo_1908,
+    :Filomena_Esteves_de_Araújo_1927, :Gilberto_Couto_Leite, :Helena_Couto_Leite, :Henrique_Luís_Esteves_de_Araújo_1924,
+    :José_Emílio_Esteves_de_Araújo_1916, :João_Bernardo_Couto_Leite_1916, :Luís_Esteves_de_Araújo_1918,
+    :Orlando_Couto_Leite, :Rosa_Couto_Leite, :Sara_Esteves_de_Araújo_1914, :Virgínia_Esteves_de_Araújo_1921;
+  :temSobrinho :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971, :Isabel_Maria_Cabrita_de_Araújo_Leite_1971,
+    :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Ana_da_Silva_Ramalho a owl:NamedIndividual;
+  :temMae :Custódia_Azevedo_1867;
+  :temPai :Manuel_da_Silva_Ramalho_1866;
+  :temAvoF :Maria_Dias_dos_Reis, :Maria_Gonçalves_de_Azevedo;
+  :temAvoM :António_da_Silva_Ramalho, :José_Francisco_Ramos_Mouco;
+  :temIrmao :Abílio_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho, :Ezequiel_da_Silva_Ramalho,
+    :Generosa_da_Silva_Ramalho, :António_da_Silva_Ramalho_1904;
+  :temSobrinho :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_ .
+
+:Arminda_da_Silva_Ramalho a owl:NamedIndividual;
+  :temMae :Custódia_Azevedo_1867;
+  :temPai :Manuel_da_Silva_Ramalho_1866;
+  :temAvoF :Maria_Dias_dos_Reis, :Maria_Gonçalves_de_Azevedo;
+  :temAvoM :António_da_Silva_Ramalho, :José_Francisco_Ramos_Mouco;
+  :temIrmao :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Ezequiel_da_Silva_Ramalho,
+    :Generosa_da_Silva_Ramalho, :António_da_Silva_Ramalho_1904;
+  :temSobrinho :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_ .
+
+:Domingos_Couto_Leite a owl:NamedIndividual;
+  :temMae :Flora_Castilho_do_Couto_Leite;
+  :temPai :Marçal_da_Costa_Leite;
+  :temIrmao :Gilberto_Couto_Leite, :Helena_Couto_Leite, :João_Bernardo_Couto_Leite_1916,
+    :Orlando_Couto_Leite, :Rosa_Couto_Leite, :Marçal_Aristides_Costa_Leite_1909;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Flora_Castilho_do_Couto_Leite a owl:NamedIndividual .
+
+:Marçal_da_Costa_Leite a owl:NamedIndividual .
+
+:Emília_Esteves_de_Araújo_1908 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Albina_Esteves_de_Araújo_1910, :Filomena_Esteves_de_Araújo_1927, :Henrique_Luís_Esteves_de_Araújo_1924,
+    :José_Emílio_Esteves_de_Araújo_1916, :Luís_Esteves_de_Araújo_1918, :Sara_Esteves_de_Araújo_1914,
+    :Virgínia_Esteves_de_Araújo_1921, :Maria_Esteves_de_Araújo_1912;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Ezequiel_da_Silva_Ramalho a owl:NamedIndividual;
+  :temMae :Custódia_Azevedo_1867;
+  :temPai :Manuel_da_Silva_Ramalho_1866;
+  :temAvoF :Maria_Dias_dos_Reis, :Maria_Gonçalves_de_Azevedo;
+  :temAvoM :António_da_Silva_Ramalho, :José_Francisco_Ramos_Mouco;
+  :temIrmao :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho,
+    :Generosa_da_Silva_Ramalho, :António_da_Silva_Ramalho_1904;
+  :temSobrinho :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_ .
+
+:Filomena_Esteves_de_Araújo_1927 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Albina_Esteves_de_Araújo_1910, :Emília_Esteves_de_Araújo_1908, :Henrique_Luís_Esteves_de_Araújo_1924,
+    :José_Emílio_Esteves_de_Araújo_1916, :Luís_Esteves_de_Araújo_1918, :Sara_Esteves_de_Araújo_1914,
+    :Virgínia_Esteves_de_Araújo_1921, :Maria_Esteves_de_Araújo_1912;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Florinda_Alves_dos_Santos a owl:NamedIndividual;
+  :temMae :Christina_Rosa_Silva_Santos_1879;
+  :temPai :Jozé_da_Silva_Santos_1879;
+  :temIrmao :Maria_Alves_dos_Santos_1906;
+  :temSobrinho :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_ .
+
+:Christina_Rosa_Silva_Santos_1879 a owl:NamedIndividual .
+
+:Jozé_da_Silva_Santos_1879 a owl:NamedIndividual .
+
+:Generosa_da_Silva_Ramalho a owl:NamedIndividual;
+  :temMae :Custódia_Azevedo_1867;
+  :temPai :Manuel_da_Silva_Ramalho_1866;
+  :temAvoF :Maria_Dias_dos_Reis, :Maria_Gonçalves_de_Azevedo;
+  :temAvoM :António_da_Silva_Ramalho, :José_Francisco_Ramos_Mouco;
+  :temIrmao :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho,
+    :Ezequiel_da_Silva_Ramalho, :António_da_Silva_Ramalho_1904;
+  :temSobrinho :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_ .
+
+:Gilberto_Couto_Leite a owl:NamedIndividual;
+  :temMae :Flora_Castilho_do_Couto_Leite;
+  :temPai :Marçal_da_Costa_Leite;
+  :temIrmao :Domingos_Couto_Leite, :Helena_Couto_Leite, :João_Bernardo_Couto_Leite_1916,
+    :Orlando_Couto_Leite, :Rosa_Couto_Leite, :Marçal_Aristides_Costa_Leite_1909;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Helena_Couto_Leite a owl:NamedIndividual;
+  :temMae :Flora_Castilho_do_Couto_Leite;
+  :temPai :Marçal_da_Costa_Leite;
+  :temIrmao :Domingos_Couto_Leite, :Gilberto_Couto_Leite, :João_Bernardo_Couto_Leite_1916,
+    :Orlando_Couto_Leite, :Rosa_Couto_Leite, :Marçal_Aristides_Costa_Leite_1909;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Henrique_Luís_Esteves_de_Araújo_1924 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Albina_Esteves_de_Araújo_1910, :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927,
+    :José_Emílio_Esteves_de_Araújo_1916, :Luís_Esteves_de_Araújo_1918, :Sara_Esteves_de_Araújo_1914,
+    :Virgínia_Esteves_de_Araújo_1921, :Maria_Esteves_de_Araújo_1912;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Henrique_Miguel_Cabrita_de_Araújo_Leite_1971 a owl:NamedIndividual;
+  :temMae :Maria_Otília_Araújo_Leite_1944;
+  :temPai :Henrique_Marçal_Araújo_Leite_1943;
+  :temAvoF :Maria_Esteves_de_Araújo_1912;
+  :temAvoM :Marçal_Aristides_Costa_Leite_1909;
+  :temIrmao :Isabel_Maria_Cabrita_de_Araújo_Leite_1971;
+  :temTio :Rui_Alberto_Araújo_Leite_1948, :Maria_Flora_Araújo_Leite_1941;
+  :temPrimo :Ana_Margarida_Ribeiro_Leite_1980, :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Maria_Otília_Araújo_Leite_1944 a owl:NamedIndividual .
+
+:Henrique_Marçal_Araújo_Leite_1943 a owl:NamedIndividual;
+  :temMae :Maria_Esteves_de_Araújo_1912;
+  :temPai :Marçal_Aristides_Costa_Leite_1909;
+  :temAvoF :Maria_Araújo_1884, :Flora_Castilho_do_Couto_Leite;
+  :temAvoM :Henrique_Luiz_de_Araújo_1867, :Marçal_da_Costa_Leite;
+  :temIrmao :Rui_Alberto_Araújo_Leite_1948, :Maria_Flora_Araújo_Leite_1941;
+  :temTio :Albina_Esteves_de_Araújo_1910, :Domingos_Couto_Leite, :Emília_Esteves_de_Araújo_1908,
+    :Filomena_Esteves_de_Araújo_1927, :Gilberto_Couto_Leite, :Helena_Couto_Leite, :Henrique_Luís_Esteves_de_Araújo_1924,
+    :José_Emílio_Esteves_de_Araújo_1916, :João_Bernardo_Couto_Leite_1916, :Luís_Esteves_de_Araújo_1918,
+    :Orlando_Couto_Leite, :Rosa_Couto_Leite, :Sara_Esteves_de_Araújo_1914, :Virgínia_Esteves_de_Araújo_1921;
+  :temSobrinho :Ana_Margarida_Ribeiro_Leite_1980, :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Ilda_dos_Santos_Ramalho_1949 a owl:NamedIndividual;
+  :temMae :Maria_Alves_dos_Santos_1906;
+  :temPai :António_da_Silva_Ramalho_1904;
+  :temAvoF :Custódia_Azevedo_1867, :Christina_Rosa_Silva_Santos_1879;
+  :temAvoM :Manuel_da_Silva_Ramalho_1866, :Jozé_da_Silva_Santos_1879;
+  :temIrmao :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho, :Manuel_Fernando_dos_Santos_Ramalho,
+    :Maria_Flora_dos_Santos_Ramalho_;
+  :temTio :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho,
+    :Ezequiel_da_Silva_Ramalho, :Florinda_Alves_dos_Santos, :Generosa_da_Silva_Ramalho;
+  :temSobrinho :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Maria_Alves_dos_Santos_1906 a owl:NamedIndividual;
+  :temMae :Christina_Rosa_Silva_Santos_1879;
+  :temPai :Jozé_da_Silva_Santos_1879;
+  :temIrmao :Florinda_Alves_dos_Santos .
+
+:António_da_Silva_Ramalho_1904 a owl:NamedIndividual;
+  :temMae :Custódia_Azevedo_1867;
+  :temPai :Manuel_da_Silva_Ramalho_1866;
+  :temAvoF :Maria_Dias_dos_Reis, :Maria_Gonçalves_de_Azevedo;
+  :temAvoM :António_da_Silva_Ramalho, :José_Francisco_Ramos_Mouco;
+  :temIrmao :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho,
+    :Ezequiel_da_Silva_Ramalho, :Generosa_da_Silva_Ramalho .
+
+:Isabel_Maria_Cabrita_de_Araújo_Leite_1971 a owl:NamedIndividual;
+  :temMae :Maria_Otília_Araújo_Leite_1944;
+  :temPai :Henrique_Marçal_Araújo_Leite_1943;
+  :temAvoF :Maria_Esteves_de_Araújo_1912;
+  :temAvoM :Marçal_Aristides_Costa_Leite_1909;
+  :temIrmao :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971;
+  :temTio :Rui_Alberto_Araújo_Leite_1948, :Maria_Flora_Araújo_Leite_1941;
+  :temPrimo :Ana_Margarida_Ribeiro_Leite_1980, :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968,
+    :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:José_Carlos_Leite_Ramalho_1967 a owl:NamedIndividual;
+  :temMae :Maria_Flora_Araújo_Leite_1941;
+  :temPai :José_dos_Santos_Ramalho_1942;
+  :temAvoF :Maria_Alves_dos_Santos_1906, :Maria_Esteves_de_Araújo_1912;
+  :temAvoM :António_da_Silva_Ramalho_1904, :Marçal_Aristides_Costa_Leite_1909;
+  :temIrmao :Maria_Helena_Leite_Ramalho_1968;
+  :temTio :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Ilda_dos_Santos_Ramalho_1949,
+    :Manuel_Carlos_dos_Santos_Ramalho, :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_;
+  :temPrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971,
+    :Isabel_Maria_Cabrita_de_Araújo_Leite_1971, :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Maria_Flora_Araújo_Leite_1941 a owl:NamedIndividual;
+  :temMae :Maria_Esteves_de_Araújo_1912;
+  :temPai :Marçal_Aristides_Costa_Leite_1909;
+  :temAvoF :Maria_Araújo_1884, :Flora_Castilho_do_Couto_Leite;
+  :temAvoM :Henrique_Luiz_de_Araújo_1867, :Marçal_da_Costa_Leite;
+  :temIrmao :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943;
+  :temTio :Albina_Esteves_de_Araújo_1910, :Domingos_Couto_Leite, :Emília_Esteves_de_Araújo_1908,
+    :Filomena_Esteves_de_Araújo_1927, :Gilberto_Couto_Leite, :Helena_Couto_Leite, :Henrique_Luís_Esteves_de_Araújo_1924,
+    :José_Emílio_Esteves_de_Araújo_1916, :João_Bernardo_Couto_Leite_1916, :Luís_Esteves_de_Araújo_1918,
+    :Orlando_Couto_Leite, :Rosa_Couto_Leite, :Sara_Esteves_de_Araújo_1914, :Virgínia_Esteves_de_Araújo_1921;
+  :temSobrinho :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971,
+    :Isabel_Maria_Cabrita_de_Araújo_Leite_1971, :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:José_dos_Santos_Ramalho_1942 a owl:NamedIndividual;
+  :temMae :Maria_Alves_dos_Santos_1906;
+  :temPai :António_da_Silva_Ramalho_1904;
+  :temAvoF :Custódia_Azevedo_1867, :Christina_Rosa_Silva_Santos_1879;
+  :temAvoM :Manuel_da_Silva_Ramalho_1866, :Jozé_da_Silva_Santos_1879;
+  :temIrmao :Ilda_dos_Santos_Ramalho_1949, :Manuel_Carlos_dos_Santos_Ramalho, :Manuel_Fernando_dos_Santos_Ramalho,
+    :Maria_Flora_dos_Santos_Ramalho_;
+  :temTio :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho,
+    :Ezequiel_da_Silva_Ramalho, :Florinda_Alves_dos_Santos, :Generosa_da_Silva_Ramalho .
+
+:José_Emílio_Esteves_de_Araújo_1916 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Albina_Esteves_de_Araújo_1910, :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927,
+    :Henrique_Luís_Esteves_de_Araújo_1924, :Luís_Esteves_de_Araújo_1918, :Sara_Esteves_de_Araújo_1914,
+    :Virgínia_Esteves_de_Araújo_1921, :Maria_Esteves_de_Araújo_1912;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:João_Bernardo_Couto_Leite_1916 a owl:NamedIndividual;
+  :temMae :Flora_Castilho_do_Couto_Leite;
+  :temPai :Marçal_da_Costa_Leite;
+  :temIrmao :Domingos_Couto_Leite, :Gilberto_Couto_Leite, :Helena_Couto_Leite, :Orlando_Couto_Leite,
+    :Rosa_Couto_Leite, :Marçal_Aristides_Costa_Leite_1909;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Luís_Esteves_de_Araújo_1918 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Albina_Esteves_de_Araújo_1910, :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927,
+    :Henrique_Luís_Esteves_de_Araújo_1924, :José_Emílio_Esteves_de_Araújo_1916, :Sara_Esteves_de_Araújo_1914,
+    :Virgínia_Esteves_de_Araújo_1921, :Maria_Esteves_de_Araújo_1912;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Manuel_Carlos_dos_Santos_Ramalho a owl:NamedIndividual;
+  :temMae :Maria_Alves_dos_Santos_1906;
+  :temPai :António_da_Silva_Ramalho_1904;
+  :temAvoF :Custódia_Azevedo_1867, :Christina_Rosa_Silva_Santos_1879;
+  :temAvoM :Manuel_da_Silva_Ramalho_1866, :Jozé_da_Silva_Santos_1879;
+  :temIrmao :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Fernando_dos_Santos_Ramalho,
+    :Maria_Flora_dos_Santos_Ramalho_;
+  :temTio :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho,
+    :Ezequiel_da_Silva_Ramalho, :Florinda_Alves_dos_Santos, :Generosa_da_Silva_Ramalho;
+  :temSobrinho :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Manuel_Fernando_dos_Santos_Ramalho a owl:NamedIndividual;
+  :temMae :Maria_Alves_dos_Santos_1906;
+  :temPai :António_da_Silva_Ramalho_1904;
+  :temAvoF :Custódia_Azevedo_1867, :Christina_Rosa_Silva_Santos_1879;
+  :temAvoM :Manuel_da_Silva_Ramalho_1866, :Jozé_da_Silva_Santos_1879;
+  :temIrmao :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Maria_Flora_dos_Santos_Ramalho_;
+  :temTio :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho,
+    :Ezequiel_da_Silva_Ramalho, :Florinda_Alves_dos_Santos, :Generosa_da_Silva_Ramalho;
+  :temSobrinho :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Maria_Flora_dos_Santos_Ramalho_ a owl:NamedIndividual;
+  :temMae :Maria_Alves_dos_Santos_1906;
+  :temPai :António_da_Silva_Ramalho_1904;
+  :temAvoF :Custódia_Azevedo_1867, :Christina_Rosa_Silva_Santos_1879;
+  :temAvoM :Manuel_da_Silva_Ramalho_1866, :Jozé_da_Silva_Santos_1879;
+  :temIrmao :Ilda_dos_Santos_Ramalho_1949, :José_dos_Santos_Ramalho_1942, :Manuel_Carlos_dos_Santos_Ramalho,
+    :Manuel_Fernando_dos_Santos_Ramalho;
+  :temTio :Abílio_da_Silva_Ramalho, :Ana_da_Silva_Ramalho, :Arminda_da_Silva_Ramalho,
+    :Ezequiel_da_Silva_Ramalho, :Florinda_Alves_dos_Santos, :Generosa_da_Silva_Ramalho;
+  :temSobrinho :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Maria_Helena_Leite_Ramalho_1968 a owl:NamedIndividual;
+  :temMae :Maria_Flora_Araújo_Leite_1941;
+  :temPai :José_dos_Santos_Ramalho_1942;
+  :temAvoF :Maria_Alves_dos_Santos_1906, :Maria_Esteves_de_Araújo_1912;
+  :temAvoM :António_da_Silva_Ramalho_1904, :Marçal_Aristides_Costa_Leite_1909;
+  :temIrmao :José_Carlos_Leite_Ramalho_1967;
+  :temTio :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Ilda_dos_Santos_Ramalho_1949,
+    :Manuel_Carlos_dos_Santos_Ramalho, :Manuel_Fernando_dos_Santos_Ramalho, :Maria_Flora_dos_Santos_Ramalho_;
+  :temPrimo :Ana_Margarida_Ribeiro_Leite_1980, :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971,
+    :Isabel_Maria_Cabrita_de_Araújo_Leite_1971, :Teresa_Maria_Ribeiro_Leite_1985 .
+
+:Orlando_Couto_Leite a owl:NamedIndividual;
+  :temMae :Flora_Castilho_do_Couto_Leite;
+  :temPai :Marçal_da_Costa_Leite;
+  :temIrmao :Domingos_Couto_Leite, :Gilberto_Couto_Leite, :Helena_Couto_Leite, :João_Bernardo_Couto_Leite_1916,
+    :Rosa_Couto_Leite, :Marçal_Aristides_Costa_Leite_1909;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Rosa_Couto_Leite a owl:NamedIndividual;
+  :temMae :Flora_Castilho_do_Couto_Leite;
+  :temPai :Marçal_da_Costa_Leite;
+  :temIrmao :Domingos_Couto_Leite, :Gilberto_Couto_Leite, :Helena_Couto_Leite, :João_Bernardo_Couto_Leite_1916,
+    :Orlando_Couto_Leite, :Marçal_Aristides_Costa_Leite_1909;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Sara_Esteves_de_Araújo_1914 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Albina_Esteves_de_Araújo_1910, :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927,
+    :Henrique_Luís_Esteves_de_Araújo_1924, :José_Emílio_Esteves_de_Araújo_1916, :Luís_Esteves_de_Araújo_1918,
+    :Virgínia_Esteves_de_Araújo_1921, :Maria_Esteves_de_Araújo_1912;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:Teresa_Maria_Ribeiro_Leite_1985 a owl:NamedIndividual;
+  :temMae :Maria_Margarida_Ribeiro_1954;
+  :temPai :Rui_Alberto_Araújo_Leite_1948;
+  :temAvoF :Maria_Esteves_de_Araújo_1912;
+  :temAvoM :Marçal_Aristides_Costa_Leite_1909;
+  :temIrmao :Ana_Margarida_Ribeiro_Leite_1980;
+  :temTio :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941;
+  :temPrimo :Henrique_Miguel_Cabrita_de_Araújo_Leite_1971, :Isabel_Maria_Cabrita_de_Araújo_Leite_1971,
+    :José_Carlos_Leite_Ramalho_1967, :Maria_Helena_Leite_Ramalho_1968 .
+
+:Virgínia_Esteves_de_Araújo_1921 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Albina_Esteves_de_Araújo_1910, :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927,
+    :Henrique_Luís_Esteves_de_Araújo_1924, :José_Emílio_Esteves_de_Araújo_1916, :Luís_Esteves_de_Araújo_1918,
+    :Sara_Esteves_de_Araújo_1914, :Maria_Esteves_de_Araújo_1912;
+  :temSobrinho :Rui_Alberto_Araújo_Leite_1948, :Henrique_Marçal_Araújo_Leite_1943, :Maria_Flora_Araújo_Leite_1941 .
+
+:temProgenitor a owl:ObjectProperty;
+  rdfs:subPropertyOf :temAntepassado .
+
+:António_da_Silva_Ramalho a owl:NamedIndividual .
+
+:Emília_Esteves a owl:NamedIndividual .
+
+:José_Emílio_de_Araújo a owl:NamedIndividual .
+
+:José_Francisco_Ramos_Mouco a owl:NamedIndividual .
+
+:José_Maria_Esteves a owl:NamedIndividual .
+
+:Maria_Dias_dos_Reis a owl:NamedIndividual .
+
+:Maria_Gonçalves_de_Azevedo a owl:NamedIndividual .
+
+:Maria_das_Dores_Fernandes_de_Brito a owl:NamedIndividual .
+
+:Maria_Esteves_de_Araújo_1912 a owl:NamedIndividual;
+  :temMae :Maria_Araújo_1884;
+  :temPai :Henrique_Luiz_de_Araújo_1867;
+  :temAvoF :Emília_Esteves, :Maria_das_Dores_Fernandes_de_Brito;
+  :temAvoM :José_Emílio_de_Araújo, :José_Maria_Esteves;
+  :temIrmao :Albina_Esteves_de_Araújo_1910, :Emília_Esteves_de_Araújo_1908, :Filomena_Esteves_de_Araújo_1927,
+    :Henrique_Luís_Esteves_de_Araújo_1924, :José_Emílio_Esteves_de_Araújo_1916, :Luís_Esteves_de_Araújo_1918,
+    :Sara_Esteves_de_Araújo_1914, :Virgínia_Esteves_de_Araújo_1921 .
+
+:Marçal_Aristides_Costa_Leite_1909 a owl:NamedIndividual;
+  :temMae :Flora_Castilho_do_Couto_Leite;
+  :temPai :Marçal_da_Costa_Leite;
+  :temIrmao :Domingos_Couto_Leite, :Gilberto_Couto_Leite, :Helena_Couto_Leite, :João_Bernardo_Couto_Leite_1916,
+    :Orlando_Couto_Leite, :Rosa_Couto_Leite .
+
+:eAntepassadoDe a owl:ObjectProperty;
+  rdfs:subPropertyOf :temRelacao .
+
+:temRelacao a owl:ObjectProperty .
+
+:eAvoFDe a owl:ObjectProperty;
+  rdfs:subPropertyOf :eProgenitorGrau2;
+  owl:inverseOf :temAvoF .
+
+:eProgenitorGrau2 a owl:ObjectProperty;
+  rdfs:subPropertyOf :eAntepassadoDe .
+
+:temAvoF a owl:ObjectProperty;
+  rdfs:subPropertyOf :temProgenitorGrau2;
+  owl:propertyChainAxiom _:node9 .
+
+:eAvoMDe a owl:ObjectProperty;
+  rdfs:subPropertyOf :eProgenitorGrau2;
+  owl:inverseOf :temAvoM .
+
+:temAvoM a owl:ObjectProperty;
+  rdfs:subPropertyOf :temProgenitorGrau2;
+  owl:propertyChainAxiom _:node11 .
+
+:eMaeDe a owl:ObjectProperty;
+  rdfs:subPropertyOf :eProgenitorDe;
+  owl:inverseOf :temMae .
+
+:eProgenitorDe a owl:ObjectProperty;
+  rdfs:subPropertyOf :eAntepassadoDe .
+
+:ePaiDe a owl:ObjectProperty;
+  rdfs:subPropertyOf :eProgenitorDe;
+  owl:inverseOf :temPai .
+
+:temAntepassado a owl:ObjectProperty;
+  rdfs:subPropertyOf :temRelacao .
+
+:temProgenitorGrau2 a owl:ObjectProperty;
+  rdfs:subPropertyOf :temAntepassado .
+
+:temIrmao a owl:ObjectProperty .
+
+:temTio a owl:ObjectProperty .
+
+:temPrimo a owl:ObjectProperty .
+
+:temSobrinho a owl:ObjectProperty .
+
+_:node9 rdf:first :temProgenitor;
+  rdf:rest _:node10 .
+
+_:node10 rdf:first :temMae;
+  rdf:rest rdf:nil .
+
+_:node11 rdf:first :temProgenitor;
+  rdf:rest _:node12 .
+
+_:node12 rdf:first :temPai;
+  rdf:rest rdf:nil .
