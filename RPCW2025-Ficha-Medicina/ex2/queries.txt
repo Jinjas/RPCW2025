@@ -42,3 +42,41 @@ where {
            :hasName ?name .
 }
 ORDER BY ASC(?name)
+
+
+select ?doenca (COUNT())
+where {
+  ?patient a :Patient ;
+           :hasName ?name .
+}
+ORDER BY ASC(?name)
+
+
+13
+
+SELECT ?doenca (COUNT(?paciente) AS ?nDoentes)
+WHERE {
+  ?doenca a :Disease .
+  ?paciente :hasDisease ?doenca .
+}
+GROUP BY ?doenca
+
+
+14
+
+SELECT ?s (COUNT(?doenca) AS ?nDoencas)
+WHERE {
+  ?doenca a :Disease ;
+  		:hasSymptom ?s .
+}
+GROUP BY ?s
+
+
+15
+
+SELECT ?s (COUNT(?doenca) AS ?nDoencas)
+WHERE {
+  ?doenca a :Disease ;
+  		:hasTreatment ?s .
+}
+GROUP BY ?s

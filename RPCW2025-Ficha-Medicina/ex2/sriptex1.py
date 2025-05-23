@@ -78,6 +78,7 @@ with open("Disease_Description.csv", "r", encoding="utf-8") as csv_file:
         if (disease_uri, RDF.type, EX.Disease) in new_graph:
             new_graph.add((disease_uri, EX.hasDescription, Literal(description)))
 
+# Process Disease treatments
 with open("Disease_Treatment.csv", "r", encoding="utf-8") as csv_file:
     reader = csv.DictReader(csv_file)
 

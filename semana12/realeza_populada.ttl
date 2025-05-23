@@ -1,0 +1,479 @@
+@prefix : <http://npcw/ontologies/2025/realeza#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://npcw/ontologies/2025/realeza> a owl:Ontology .
+
+:D._Afonso_VI a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1643-08-21" ;
+    :dataObito "1683-09-12" ;
+    :nome "D. Afonso VI" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._João_IV ;
+    :temPai :D._Luísa_de_Gusmão .
+
+:D._Fernando_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1345-10-31" ;
+    :dataObito "1383-10-22" ;
+    :nome "D. Fernando I" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :D._Pedro_I ;
+    :temPai :D._Constança_Manuel .
+
+:D._Filipe_III a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1605-04-08" ;
+    :dataObito "1665-09-17" ;
+    :nome "D. Filipe III" ;
+    :pertenceDinastia :Dinastia_3 ;
+    :temMae :D._Filipe_II ;
+    :temPai :Margarida_de_Áustria .
+
+:D._Henrique_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1512-01-31" ;
+    :dataObito "1580-01-31" ;
+    :nome "D. Henrique I" ;
+    :pertenceDinastia :Dinastia_2 ;
+    :temMae :D._Manuel_I ;
+    :temPai :D._Maria_de_Aragão .
+
+:D._João_II a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1455-03-03" ;
+    :dataObito "1495-10-25" ;
+    :nome "D. João II" ;
+    :pertenceDinastia :Dinastia_2 ;
+    :temMae :D._Afonso_V ;
+    :temPai :D._Isabel_de_Coimbra .
+
+:D._João_III a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1502-06-06" ;
+    :dataObito "1557-06-11" ;
+    :nome "D. João III" ;
+    :pertenceDinastia :Dinastia_2 ;
+    :temMae :D._Manuel_I ;
+    :temPai :D._Maria_de_Aragão .
+
+:D._Manuel_II a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1889-11-15" ;
+    :dataObito "1932-07-02" ;
+    :nome "D. Manuel II" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._Carlos_I ;
+    :temPai :D._Amélia_de_Orleães .
+
+:D._Miguel_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1802-10-26" ;
+    :dataObito "1866-11-14" ;
+    :nome "D. Miguel I" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._João_VI ;
+    :temPai :D._Carlota_Joaquina_de_Bourbon .
+
+:D._Pedro_V a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1837-09-16" ;
+    :dataObito "1861-11-11" ;
+    :nome "D. Pedro V" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._Maria_II ;
+    :temPai :D._Fernando_II_de_Saxe-Coburgo-Gota .
+
+:D._Sancho_II a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1209-09-08" ;
+    :dataObito "1248-01-04" ;
+    :nome "D. Sancho II" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :D._Afonso_II ;
+    :temPai :D._Urraca_de_Castela .
+
+:D._Sebastião_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1554-01-20" ;
+    :dataObito "1578-08-04" ;
+    :nome "D. Sebastião I" ;
+    :pertenceDinastia :Dinastia_2 ;
+    :temMae <http://npcw/ontologies/2025/realeza#D._João_Manuel,_Príncipe_de_Portugal> ;
+    :temPai :D._Joana_de_Áustria .
+
+:dataNasc a owl:DatatypeProperty .
+
+:dataObito a owl:DatatypeProperty .
+
+:nome a owl:DatatypeProperty .
+
+:pertenceDinastia a owl:ObjectProperty .
+
+:temMae a owl:ObjectProperty .
+
+:temPai a owl:ObjectProperty .
+
+:Ana_de_Áustria a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Ana de Áustria" .
+
+:Beatriz_de_Castela a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Beatriz de Castela" .
+
+:Carlos_I_de_Espanha a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Isabel de Portugal" .
+
+:D._Afonso_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1109-07-25" ;
+    :dataObito "1185-12-06" ;
+    :nome "D. Afonso I" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :Henrique_de_Borgonha ;
+    :temPai :Teresa_de_Leão .
+
+:D._Afonso_III a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1210-05-05" ;
+    :dataObito "1279-02-16" ;
+    :nome "D. Afonso III" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :D._Afonso_II ;
+    :temPai :D._Urraca_de_Castela .
+
+:D._Afonso_IV a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1291-02-08" ;
+    :dataObito "1357-05-28" ;
+    :nome "D. Afonso IV" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :D._Dinis ;
+    :temPai :D._Isabel_de_Aragão .
+
+:D._Afonso_V a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1432-01-15" ;
+    :dataObito "1481-08-28" ;
+    :nome "D. Afonso V" ;
+    :pertenceDinastia :Dinastia_2 ;
+    :temMae :D._Duarte_I ;
+    :temPai :D._Leonor_de_Aragão .
+
+:D._Amélia_de_Orleães a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Amélia de Orleães" .
+
+:D._Ana_de_Velasco_e_Girón a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Ana de Velasco e Girón" .
+
+:D._Beatriz_de_Castela a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Beatriz de Castela" .
+
+:D._Beatriz_de_Portugal a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Beatriz de Portugal" .
+
+:D._Carlos_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1863-09-28" ;
+    :dataObito "1908-02-01" ;
+    :nome "D. Carlos I" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._Luís_I ;
+    :temPai :D._Maria_Pia_de_Saboia .
+
+:D._Constança_Manuel a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Constança Manuel" .
+
+:D._Dinis a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1261-10-09" ;
+    :dataObito "1325-01-07" ;
+    :nome "D. Dinis" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :D._Afonso_III ;
+    :temPai :Beatriz_de_Castela .
+
+:D._Duarte_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1391-10-31" ;
+    :dataObito "1438-09-09" ;
+    :nome "D. Duarte I" ;
+    :pertenceDinastia :Dinastia_2 ;
+    :temMae :D._João_I ;
+    :temPai :D._Filipa_de_Lencastre .
+
+:D._Dulce_de_Aragão a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Dulce de Aragão" .
+
+<http://npcw/ontologies/2025/realeza#D._Fernando,_Duque_de_Viseu> a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Beatriz de Portugal" .
+
+:D._Filipa_de_Lencastre a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Filipa de Lencastre" .
+
+:D._Filipe_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1527-05-21" ;
+    :dataObito "1598-09-13" ;
+    :nome "D. Filipe I" ;
+    :pertenceDinastia :Dinastia_3 ;
+    :temMae :Carlos_I_de_Espanha ;
+    :temPai :Isabel_de_Portugal .
+
+:D._Filipe_II a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1578-04-14" ;
+    :dataObito "1621-03-31" ;
+    :nome "D. Filipe II" ;
+    :pertenceDinastia :Dinastia_3 ;
+    :temMae :D._Filipe_I ;
+    :temPai :Ana_de_Áustria .
+
+:D._Isabel_de_Aragão a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Isabel de Aragão" .
+
+:D._Isabel_de_Coimbra a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Isabel de Coimbra" .
+
+:D._Joana_de_Áustria a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Joana de Áustria" .
+
+:D._José_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1714-06-06" ;
+    :dataObito "1777-02-24" ;
+    :nome "D. José I" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._João_V ;
+    :temPai :D._Maria_Ana_da_Áustria .
+
+:D._João_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1357-04-11" ;
+    :dataObito "1433-08-14" ;
+    :nome "D. João I" ;
+    :pertenceDinastia :Dinastia_2 ;
+    :temMae :D._Pedro_I ;
+    :temPai :Teresa_Lourenço .
+
+<http://npcw/ontologies/2025/realeza#D._João_Manuel,_Príncipe_de_Portugal> a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Joana de Áustria" .
+
+:D._João_V a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1689-10-22" ;
+    :dataObito "1750-07-31" ;
+    :nome "D. João V" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._Pedro_II ;
+    :temPai :D._Maria_Sofia_de_Neuburgo .
+
+:D._Leonor_de_Aragão a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Leonor de Aragão" .
+
+:D._Luís_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1838-10-31" ;
+    :dataObito "1889-10-19" ;
+    :nome "D. Luís I" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._Maria_II ;
+    :temPai :D._Fernando_II_de_Saxe-Coburgo-Gota .
+
+:D._Mafalda_de_Saboia a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Mafalda de Saboia" .
+
+:D._Maria_Ana_da_Áustria a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Maria Ana da Áustria" .
+
+:D._Maria_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1734-12-17" ;
+    :dataObito "1816-03-20" ;
+    :nome "D. Maria I" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._José_I ;
+    :temPai :D._Mariana_Vitória_de_Bourbon .
+
+:D._Maria_Leopoldina_da_Áustria a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Maria Leopoldina da Áustria" .
+
+:D._Maria_Pia_de_Saboia a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Maria Pia de Saboia" .
+
+:D._Maria_Sofia_de_Neuburgo a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Maria Sofia de Neuburgo" .
+
+:D._Mariana_Vitória_de_Bourbon a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Mariana Vitória de Bourbon" .
+
+:D._Pedro_II a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1648-04-26" ;
+    :dataObito "1706-12-09" ;
+    :nome "D. Pedro II" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._João_IV ;
+    :temPai :D._Luísa_de_Gusmão .
+
+:D._Pedro_III a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Maria I" .
+
+:D._Pedro_IV a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1798-10-12" ;
+    :dataObito "1834-09-24" ;
+    :nome "D. Pedro IV" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._João_VI ;
+    :temPai :D._Carlota_Joaquina_de_Bourbon .
+
+:D._Sancho_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1154-11-11" ;
+    :dataObito "1211-03-26" ;
+    :nome "D. Sancho I" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :D._Afonso_I ;
+    :temPai :D._Mafalda_de_Saboia .
+
+:Henrique_de_Borgonha a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Teresa de Leão" .
+
+:Isabel_de_Portugal a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Isabel de Portugal" .
+
+:Margarida_de_Áustria a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Margarida de Áustria" .
+
+<http://npcw/ontologies/2025/realeza#Teodósio_II,_Duque_de_Bragança> a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Ana de Velasco e Girón" .
+
+:Teresa_Lourenço a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Teresa Lourenço" .
+
+:Teresa_de_Leão a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "Teresa de Leão" .
+
+:D._Afonso_II a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1185-04-23" ;
+    :dataObito "1223-03-25" ;
+    :nome "D. Afonso II" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :D._Sancho_I ;
+    :temPai :D._Dulce_de_Aragão .
+
+:D._Carlota_Joaquina_de_Bourbon a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Carlota Joaquina de Bourbon" .
+
+:D._Fernando_II_de_Saxe-Coburgo-Gota a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Fernando II de Saxe-Coburgo-Gota" .
+
+:D._João_IV a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1604-03-19" ;
+    :dataObito "1656-11-06" ;
+    :nome "D. João IV" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae <http://npcw/ontologies/2025/realeza#Teodósio_II,_Duque_de_Bragança> ;
+    :temPai :D._Ana_de_Velasco_e_Girón .
+
+:D._João_VI a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1767-05-13" ;
+    :dataObito "1826-03-10" ;
+    :nome "D. João VI" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._Pedro_III ;
+    :temPai :D._Maria_I .
+
+:D._Luísa_de_Gusmão a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Luísa de Gusmão" .
+
+:D._Manuel_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1469-05-31" ;
+    :dataObito "1521-12-13" ;
+    :nome "D. Manuel I" ;
+    :pertenceDinastia :Dinastia_2 ;
+    :temMae <http://npcw/ontologies/2025/realeza#D._Fernando,_Duque_de_Viseu> ;
+    :temPai :D._Beatriz_de_Portugal .
+
+:D._Maria_II a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1819-04-04" ;
+    :dataObito "1853-11-15" ;
+    :nome "D. Maria II" ;
+    :pertenceDinastia :Dinastia_4 ;
+    :temMae :D._Pedro_IV ;
+    :temPai :D._Maria_Leopoldina_da_Áustria .
+
+:D._Maria_de_Aragão a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Maria de Aragão" .
+
+:D._Pedro_I a :Pessoa,
+        owl:NamedIndividual ;
+    :dataNasc "1320-04-08" ;
+    :dataObito "1367-01-18" ;
+    :nome "D. Pedro I" ;
+    :pertenceDinastia :Dinastia_1 ;
+    :temMae :D._Afonso_IV ;
+    :temPai :D._Beatriz_de_Castela .
+
+:D._Urraca_de_Castela a :Pessoa,
+        owl:NamedIndividual ;
+    :nome "D. Urraca de Castela" .
+
+:Dinastia_3 a :Dinastia,
+        owl:NamedIndividual ;
+    :nome "Dinastia Filipina" .
+
+:Dinastia a owl:Class .
+
+:Dinastia_2 a :Dinastia,
+        owl:NamedIndividual ;
+    :nome "Dinastia de Avis" .
+
+:Dinastia_1 a :Dinastia,
+        owl:NamedIndividual ;
+    :nome "Dinastia Afonsina" .
+
+:Dinastia_4 a :Dinastia,
+        owl:NamedIndividual ;
+    :nome "Dinastia de Bragança" .
+
+:Pessoa a owl:Class .
+

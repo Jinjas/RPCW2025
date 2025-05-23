@@ -1,0 +1,52 @@
+@prefix : <http://npcw/ontologies/2025/realeza#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://npcw/ontologies/2025/realeza#> .
+
+<http://npcw/ontologies/2025/realeza> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://npcw/ontologies/2025/realeza#pertenceDinastia
+:pertenceDinastia rdf:type owl:ObjectProperty .
+
+
+###  http://npcw/ontologies/2025/realeza#temMae
+:temMae rdf:type owl:ObjectProperty .
+
+
+###  http://npcw/ontologies/2025/realeza#temPai
+:temPai rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://npcw/ontologies/2025/realeza#dataNasc
+:dataNasc rdf:type owl:DatatypeProperty .
+
+
+###  http://npcw/ontologies/2025/realeza#dataObito
+:dataObito rdf:type owl:DatatypeProperty .
+
+
+###  http://npcw/ontologies/2025/realeza#nome
+:nome rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://npcw/ontologies/2025/realeza#Dinastia
+:Dinastia rdf:type owl:Class .
+
+
+###  http://npcw/ontologies/2025/realeza#Pessoa
+:Pessoa rdf:type owl:Class .
